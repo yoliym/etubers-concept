@@ -1,26 +1,316 @@
-.youtube-container {
-  padding: 3.5rem 2rem;
-  text-align: center;
-  max-width: 800px;
+.yt-section {
+  padding: 8rem 0;
+  background-color: #16181d;
+  color: #f4f4f0;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.yt-container {
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.yt-badge {
-  display: inline-block;
-  color: var(--primary);
+/* Header */
+.yt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+}
+
+.yt-header-text {
+  max-width: 600px;
+}
+
+.yt-eyebrow {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
   font-weight: 700;
-  font-size: 0.85rem;
+  color: var(--accent-orange, #d46c43);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.yt-heading {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.yt-intro {
+  font-size: 1.1rem;
+  color: rgba(244, 244, 240, 0.7);
+  line-height: 1.6;
+}
+
+.yt-primary-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: var(--accent-orange, #d46c43);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  border: 2px solid var(--accent-orange, #d46c43);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.yt-primary-btn:hover,
+.yt-primary-btn:focus-visible {
+  background-color: var(--accent-orange, #d46c43);
+  color: #0f1115;
+  outline: none;
+}
+
+/* Media Showcase Grid */
+.yt-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+/* Base Link Styles */
+.yt-video-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  border-radius: 4px;
+}
+
+.yt-video-link:focus-visible {
+  box-shadow: 0 0 0 3px var(--accent-orange, #d46c43);
+}
+
+/* Image Wrappers */
+.yt-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #1a1c23;
+  margin-bottom: 1.5rem;
+}
+
+.yt-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Play Icon Overlay */
+.yt-play-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(15, 17, 21, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s ease;
+}
+
+.yt-play-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(212, 108, 67, 0.9); /* Etubers Orange */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding-left: 5px; /* Visual center adjustment for play triangle */
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.yt-play-icon.small {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  padding-left: 3px;
+}
+
+/* Typography & Meta */
+.yt-category {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-orange, #d46c43);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.yt-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
-.youtube-container h2 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
+.yt-description {
+  font-size: 1rem;
+  color: rgba(244, 244, 240, 0.6);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.youtube-container p {
-  color: var(--text-muted);
-  margin-bottom: 1.8rem;
+.yt-watch-action {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-orange, #d46c43);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.yt-watch-action::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-orange, #d46c43);
+  transition: width 0.3s ease;
+}
+
+.yt-arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Supporting List (Right Column) */
+.yt-supporting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.yt-compact-link {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.yt-compact-thumbnail-wrapper {
+  position: relative;
+  width: 200px;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #1a1c23;
+}
+
+.yt-compact-meta {
+  flex-grow: 1;
+}
+
+.yt-compact-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Interactions */
+.yt-video-link:hover .yt-thumbnail {
+  transform: scale(1.05);
+}
+.yt-video-link:hover .yt-play-overlay {
+  background-color: transparent;
+}
+.yt-video-link:hover .yt-play-icon {
+  transform: scale(1.1);
+}
+.yt-video-link:hover .yt-title,
+.yt-video-link:hover .yt-compact-title {
+  color: var(--accent-orange, #d46c43);
+}
+.yt-video-link:hover .yt-watch-action::after {
+  width: 100%;
+}
+.yt-video-link:hover .yt-arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yt-thumbnail, .yt-play-icon, .yt-arrow, .yt-watch-action::after {
+    transition: none;
+  }
+  .yt-video-link:hover .yt-thumbnail,
+  .yt-video-link:hover .yt-play-icon {
+    transform: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .yt-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .yt-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .yt-compact-link {
+    gap: 1rem;
+  }
+  .yt-compact-thumbnail-wrapper {
+    width: 160px;
+  }
+  .yt-compact-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .yt-section {
+    padding: 5rem 0;
+  }
+  .yt-header {
+    margin-bottom: 3rem;
+  }
+  .yt-heading {
+    font-size: 2.2rem;
+  }
+  .yt-primary-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .yt-compact-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .yt-compact-thumbnail-wrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .yt-supporting-list {
+    gap: 3rem;
+  }
 }

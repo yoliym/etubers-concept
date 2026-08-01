@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Programs from './components/Programs/Programs';
 import Journey from './components/Journey/Journey';
+import YouTube from './components/YouTube/YouTube';
 
 import './styles/global.css';
 
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Programs />
         <Journey />
+        <YouTube />
       </main>
     </div>
   );
