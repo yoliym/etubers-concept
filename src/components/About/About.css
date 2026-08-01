@@ -134,8 +134,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 68%;
-  transform: translateY(-5%) scale(1.38);
+  object-position: center 78%;
+  transform: translateY(-13%) scale(1.55);
   transform-origin: center center;
   border-radius: 4px;
 }
@@ -230,8 +230,8 @@
     bottom: -2rem;
   }
   .about-portrait {
-    object-position: center 62%;
-    transform: translateY(-3%) scale(1.24);
+    object-position: center 72%;
+    transform: translateY(-8%) scale(1.38);
     transform-origin: center center;
   }
 }
