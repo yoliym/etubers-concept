@@ -5,6 +5,7 @@ import About from './components/About/About';
 import Programs from './components/Programs/Programs';
 import Journey from './components/Journey/Journey';
 import YouTube from './components/YouTube/YouTube';
+import FAQ from './components/FAQ/FAQ';
 
 import './styles/global.css';
 
@@ -18,6 +19,7 @@ function App() {
         <Programs />
         <Journey />
         <YouTube />
+        <FAQ />
       </main>
     </div>
   );
