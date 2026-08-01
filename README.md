@@ -10,12 +10,8 @@ A modern, responsive front-end concept created for Etubers, an Ethiopian digital
 
 ## Project Preview
 
-<!--
 ![Etubers desktop homepage](docs/screenshots/etubers-desktop.png)
 ![Etubers mobile homepage](docs/screenshots/etubers-mobile.png)
--->
-
-Screenshots will be added after the final live-site capture.
 
 ## Overview
 
