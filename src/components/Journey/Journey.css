@@ -1,28 +1,252 @@
-.journey-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+.journey-section {
+  padding: 8rem 0;
+  background-color: #0f1115;
+  color: #f4f4f0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  overflow: hidden;
 }
 
-.journey-card {
-  padding: 2rem;
+.journey-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header Area */
+.journey-header {
+  max-width: 700px;
+  margin-bottom: 6rem;
+}
+
+.journey-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.journey-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-orange, #d46c43);
+  letter-spacing: 0.15em;
+}
+
+.journey-brand {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(244, 244, 240, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.journey-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.journey-intro {
+  font-size: 1.15rem;
+  color: rgba(244, 244, 240, 0.7);
+  line-height: 1.6;
+}
+
+/* Path & Steps Layout */
+.journey-path {
   position: relative;
 }
 
+.journey-line {
+  position: absolute;
+  top: 14px; /* Center with the marker dots */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.journey-line-fill {
+  height: 100%;
+  background-color: var(--accent-orange, #d46c43);
+  width: 0%;
+  transform-origin: left;
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual Step */
 .journey-step {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.step-marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0f1115;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+.marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-orange, #d46c43);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.journey-step:hover .step-marker {
+  border-color: var(--accent-orange, #d46c43);
+}
+
+.journey-step:hover .marker-dot {
+  transform: scale(1);
+}
+
+/* Content */
+.step-number {
+  font-size: 5rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  line-height: 0.8;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-.journey-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.step-label {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: var(--text-primary, #f4f4f0);
 }
 
-.journey-card p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.step-description {
+  font-size: 0.95rem;
+  color: rgba(244, 244, 240, 0.65);
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* CSS Animations (Restrained entrance) */
+@keyframes drawLine {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Using a simple delayed entrance since we don't have IntersectionObserver wired up */
+.anim-grow-line {
+  animation: drawLine 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.anim-fade-in-1 {
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.anim-fade-in-2 {
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+.anim-fade-in-3 {
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 1.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-grow-line, .anim-fade-in-1, .anim-fade-in-2, .anim-fade-in-3 {
+    animation: none;
+    opacity: 1;
+    width: 100%;
+    transform: none;
+  }
+  .marker-dot {
+    transition: none;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .journey-steps {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .journey-line {
+    top: 0;
+    bottom: 0;
+    left: 14px;
+    width: 2px;
+    height: auto;
+  }
+
+  .journey-line-fill {
+    width: 100%;
+    height: 0%;
+    transform-origin: top;
+  }
+
+  @keyframes drawLineVertical {
+    0% { height: 0%; }
+    100% { height: 100%; }
+  }
+
+  .anim-grow-line {
+    animation-name: drawLineVertical;
+  }
+
+  .journey-step {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .step-marker {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .step-number {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .journey-section {
+    padding: 5rem 0;
+  }
+  .journey-header {
+    margin-bottom: 4rem;
+  }
+  .journey-heading {
+    font-size: 2.5rem;
+  }
+  .journey-step {
+    gap: 1.5rem;
+  }
 }

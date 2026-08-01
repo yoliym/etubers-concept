@@ -1,31 +1,79 @@
 import React from 'react';
 import './Journey.css';
 
-export default function Journey() {
-  const steps = [
-    { step: '01', title: 'Niche Discovery', desc: 'Identify high-demand, low-competition sub-niches.' },
-    { step: '02', title: 'Content Architecture', desc: 'Craft high-retention hooks and story frameworks.' },
-    { step: '03', title: 'Production Mastery', desc: 'Optimize recording, voiceover, and editing pipelines.' },
-    { step: '04', title: 'Algorithmic Scale', desc: 'Leverage SEO, A/B thumbnails, and audience analytics.' }
-  ];
-
+const Journey = () => {
   return (
-    <section id="journey" className="journey-section">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">The 4-Step Success Framework</h2>
-          <p className="section-subtitle">A proven methodology designed to turn viewers into loyal subscribers.</p>
+    <section className="journey-section" id="journey">
+      <div className="journey-container">
+        
+        {/* Header Block */}
+        <div className="journey-header">
+          <div className="journey-header-meta">
+            <span className="journey-eyebrow">FROM LEARNING TO EXECUTION</span>
+            <span className="journey-brand">TALK LESS. DO MORE.</span>
+          </div>
+          <h2 className="journey-heading">Knowledge Means More When You Use It.</h2>
+          <p className="journey-intro">
+            Etubers is designed to move people beyond passive watching—from understanding a skill to practicing it and putting it into action.
+          </p>
         </div>
-        <div className="journey-grid">
-          {steps.map((s, i) => (
-            <div key={i} className="journey-card glass-card">
-              <span className="journey-step">{s.step}</span>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
+
+        {/* Process Path */}
+        <div className="journey-path">
+          <div className="journey-line">
+            <div className="journey-line-fill anim-grow-line"></div>
+          </div>
+          
+          <div className="journey-steps">
+            
+            {/* Step 1 */}
+            <div className="journey-step anim-fade-in-1">
+              <div className="step-marker">
+                <div className="marker-dot"></div>
+              </div>
+              <div className="step-content">
+                <span className="step-number">01</span>
+                <h3 className="step-label">LEARN</h3>
+                <p className="step-description">
+                  Access practical lessons and free resources that simplify useful digital skills.
+                </p>
+              </div>
             </div>
-          ))}
+
+            {/* Step 2 */}
+            <div className="journey-step anim-fade-in-2">
+              <div className="step-marker">
+                <div className="marker-dot"></div>
+              </div>
+              <div className="step-content">
+                <span className="step-number">02</span>
+                <h3 className="step-label">BUILD</h3>
+                <p className="step-description">
+                  Practice through projects, guided tasks and focused skill development.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="journey-step anim-fade-in-3">
+              <div className="step-marker">
+                <div className="marker-dot"></div>
+              </div>
+              <div className="step-content">
+                <span className="step-number">03</span>
+                <h3 className="step-label">EXECUTE</h3>
+                <p className="step-description">
+                  Apply what you learn through freelancing, business and real-world opportunities.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
+
       </div>
     </section>
   );
-}
+};
+
+export default Journey;
