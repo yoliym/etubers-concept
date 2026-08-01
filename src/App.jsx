@@ -31,7 +31,32 @@ function App() {
     
     // Listen for hash changes (e.g. browser back/forward)
     window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+
+    // Scroll Reveal Observer
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.1,
+      }
+    );
+
+    document.querySelectorAll('.reveal-section').forEach((el) => {
+      revealObserver.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener('hashchange', handleHash);
+      revealObserver.disconnect();
+    };
   }, []);
 
   return (

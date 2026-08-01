@@ -3,17 +3,17 @@ import './Journey.css';
 
 const Journey = () => {
   return (
-    <section className="journey-section" id="journey">
+    <section className="journey-section reveal-section" id="journey">
       <div className="journey-container">
         
         {/* Header Block */}
         <div className="journey-header">
-          <div className="journey-header-meta">
+          <div className="journey-header-meta reveal-el delay-1">
             <span className="journey-eyebrow">FROM LEARNING TO EXECUTION</span>
             <span className="journey-brand">TALK LESS. DO MORE.</span>
           </div>
-          <h2 className="journey-heading">Knowledge Means More When You Use It.</h2>
-          <p className="journey-intro">
+          <h2 className="journey-heading reveal-el delay-2">Knowledge Means More When You Use It.</h2>
+          <p className="journey-intro reveal-el delay-3">
             Etubers is designed to move people beyond passive watching—from understanding a skill to practicing it and putting it into action.
           </p>
         </div>
