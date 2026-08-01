@@ -6,6 +6,8 @@ import Programs from './components/Programs/Programs';
 import Journey from './components/Journey/Journey';
 import YouTube from './components/YouTube/YouTube';
 import FAQ from './components/FAQ/FAQ';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 import './styles/global.css';
 
@@ -20,7 +22,9 @@ function App() {
         <Journey />
         <YouTube />
         <FAQ />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

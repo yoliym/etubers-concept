@@ -17,7 +17,9 @@ export default function Navbar() {
           <div className="nav-links">
             <a href="#about" className="nav-link">About</a>
             <a href="#programs" className="nav-link">Programs</a>
+            <a href="#journey" className="nav-link">Learning Journey</a>
             <a href="#resources" className="nav-link">Free Resources</a>
+            <a href="#faq" className="nav-link">FAQ</a>
           </div>
           <button className="btn-nav">Join Etubers</button>
         </div>
@@ -41,7 +43,9 @@ export default function Navbar() {
         <div className="nav-mobile-links">
           <a href="#about" onClick={() => setIsOpen(false)}>About</a>
           <a href="#programs" onClick={() => setIsOpen(false)}>Programs</a>
+          <a href="#journey" onClick={() => setIsOpen(false)}>Learning Journey</a>
           <a href="#resources" onClick={() => setIsOpen(false)}>Free Resources</a>
+          <a href="#faq" onClick={() => setIsOpen(false)}>FAQ</a>
           <button className="btn-nav mobile-cta">Join Etubers</button>
         </div>
       </div>

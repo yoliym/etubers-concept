@@ -1,32 +1,81 @@
 import React from 'react';
 import './Footer.css';
 
-export default function Footer() {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="footer">
-      <div className="container footer-content">
-        <div className="footer-brand">
-          <span className="gradient-text font-bold text-xl">E-TUBERS</span>
-          <p>The premier accelerator for modern digital content creators.</p>
-        </div>
-        <div className="footer-links">
-          <div>
-            <h5>Programs</h5>
-            <a href="#">Creator Mastery</a>
-            <a href="#">Faceless Channels</a>
-            <a href="#">Short-Form Viral</a>
+    <footer className="footer-section">
+      <div className="footer-container">
+        
+        {/* Main Footer Grid */}
+        <div className="footer-grid">
+          
+          {/* Brand Column */}
+          <div className="footer-brand-col">
+            <h2 className="footer-logo">ETUBERS</h2>
+            <p className="footer-description">
+              Practical digital education, free learning resources and guided mentorship focused on turning knowledge into action.
+            </p>
           </div>
-          <div>
-            <h5>Company</h5>
-            <a href="#">About Us</a>
-            <a href="#">Success Stories</a>
-            <a href="#">Contact</a>
+
+          {/* Navigation Column */}
+          <div className="footer-nav-col">
+            <h3 className="footer-heading">Platform</h3>
+            <ul className="footer-links">
+              <li><a href="#about" className="footer-link">About</a></li>
+              <li><a href="#programs" className="footer-link">Programs</a></li>
+              <li><a href="#journey" className="footer-link">Learning Journey</a></li>
+              <li><a href="#resources" className="footer-link">Free Resources</a></li>
+              <li><a href="#faq" className="footer-link">FAQ</a></li>
+            </ul>
           </div>
+
+          {/* Official Links Column */}
+          <div className="footer-nav-col">
+            <h3 className="footer-heading">Official Links</h3>
+            <ul className="footer-links">
+              <li><a href="https://www.youtube.com/@etubers" target="_blank" rel="noopener noreferrer" className="footer-link">YouTube</a></li>
+              <li><a href="https://www.instagram.com/etubersofficial/" target="_blank" rel="noopener noreferrer" className="footer-link">Instagram</a></li>
+              <li><a href="https://t.me/etubers" target="_blank" rel="noopener noreferrer" className="footer-link">Telegram</a></li>
+              <li><a href="https://www.etubers.org/" target="_blank" rel="noopener noreferrer" className="footer-link">Official Website</a></li>
+              <li><a href="https://upwork.etubers.org/" target="_blank" rel="noopener noreferrer" className="footer-link">Mentorship</a></li>
+            </ul>
+          </div>
+
         </div>
-      </div>
-      <div className="footer-bottom text-center">
-        <p>© {new Date().getFullYear()} E-Tubers Concept. All rights reserved.</p>
+
+        {/* Footer Bottom */}
+        <div className="footer-bottom">
+          
+          <div className="footer-developer-credit">
+            <span className="credit-eyebrow">DESIGNED & DEVELOPED BY</span>
+            <span className="credit-name">Abdi Tilahun</span>
+            <span className="credit-role">Front-End Developer</span>
+            <a 
+              href="https://www.upwork.com/freelancers/~01b130a44cae30af9c" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="credit-link"
+            >
+              Available for hire on Upwork
+            </a>
+          </div>
+
+          <div className="footer-legal">
+            <div className="footer-disclaimer">
+              This is an independent portfolio concept created to demonstrate front-end design and development. It is not the official Etubers website and is not presented as an official partnership.
+            </div>
+            <div className="footer-copyright">
+              &copy; {currentYear} Etubers Concept Website
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
