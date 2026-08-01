@@ -8,7 +8,7 @@ const youtubeData = {
     title: 'Digital Marketing Full Course',
     description: 'Master the fundamentals of digital marketing and learn how to build high-converting campaigns from scratch.',
     url: 'https://www.youtube.com/watch?v=9s_QNbQqFKY',
-    image: '/images/etubers/thumbnails/digital-marketing-course.jpg'
+    image: `${import.meta.env.BASE_URL}images/etubers/thumbnails/digital-marketing-course.jpg`
   },
   supporting: [
     {
@@ -16,21 +16,21 @@ const youtubeData = {
       category: 'Video Editing',
       title: 'Video Editing Full Course',
       url: 'https://www.youtube.com/watch?v=NgrXxAPxmEY',
-      image: '/images/etubers/thumbnails/video-editing-course.jpg'
+      image: `${import.meta.env.BASE_URL}images/etubers/thumbnails/video-editing-course.jpg`
     },
     {
       id: 'sup2',
       category: 'Personal Development',
       title: 'Creator / Personal Development Video',
       url: 'https://www.youtube.com/watch?v=HvKmARdPpGg',
-      image: '/images/etubers/thumbnails/creator-reference-01.jpg'
+      image: `${import.meta.env.BASE_URL}images/etubers/thumbnails/creator-reference-01.jpg`
     },
     {
       id: 'sup3',
       category: 'Online Business',
       title: 'Online Business / Return Video',
       url: 'https://www.youtube.com/watch?v=h5U8GMrKwA4',
-      image: '/images/etubers/thumbnails/creator-reference-02.jpg'
+      image: `${import.meta.env.BASE_URL}images/etubers/thumbnails/creator-reference-02.jpg`
     }
   ]
 };

@@ -75,7 +75,7 @@ export default function Hero() {
             {/* The portrait */}
             <div className="portrait-wrapper">
               <img 
-                src="/images/etubers/thumbnails/digital-marketing-course.jpg" 
+                src={`${import.meta.env.BASE_URL}images/etubers/thumbnails/digital-marketing-course.jpg`} 
                 alt="Mikiyas Mulugeta" 
                 className={`portrait-img ${imageError ? 'hidden' : ''}`}
                 onError={() => setImageError(true)}

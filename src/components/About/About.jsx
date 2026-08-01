@@ -44,7 +44,7 @@ const About = () => {
           <div className="about-visual-column">
             <div className="about-image-wrapper">
               <img 
-                src="/images/etubers/thumbnails/creator-reference-02.jpg" 
+                src={`${import.meta.env.BASE_URL}images/etubers/thumbnails/creator-reference-02.jpg`}
                 alt="Mikiyas - Etubers" 
                 className={`about-portrait ${imgError ? 'hidden' : ''}`}
                 onError={() => setImgError(true)}
