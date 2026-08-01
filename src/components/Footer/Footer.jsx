@@ -5,14 +5,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer-section reveal-section">
+    <footer className="footer-section">
       <div className="footer-container">
         
         {/* Main Footer Grid */}
         <div className="footer-grid">
           
           {/* Brand Column */}
-          <div className="footer-brand-col reveal-el delay-1">
+          <div className="footer-brand-col">
             <h2 className="footer-logo">ETUBERS</h2>
             <p className="footer-description">
               Practical digital education, free learning resources and guided mentorship focused on turning knowledge into action.
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Column */}
-          <div className="footer-nav-col reveal-el delay-2">
+          <div className="footer-nav-col">
             <h3 className="footer-heading">Platform</h3>
             <ul className="footer-links">
               <li><a href="#about" className="footer-link">About</a></li>
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           {/* Official Links Column */}
-          <div className="footer-nav-col reveal-el delay-3">
+          <div className="footer-nav-col">
             <h3 className="footer-heading">Official Links</h3>
             <ul className="footer-links">
               <li><a href="https://www.youtube.com/@etubers" target="_blank" rel="noopener noreferrer" className="footer-link">YouTube</a></li>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="footer-bottom reveal-el delay-4">
+        <div className="footer-bottom">
           
           <div className="footer-developer-credit">
             <span className="credit-eyebrow">DESIGNED & DEVELOPED BY</span>

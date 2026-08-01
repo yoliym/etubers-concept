@@ -3,20 +3,20 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <section className="cta-section reveal-section">
+    <section className="cta-section">
       <div className="cta-container">
         
         {/* Background typographic element */}
         <div className="cta-bg-text" aria-hidden="true">BUILD</div>
         
         <div className="cta-content">
-          <span className="cta-eyebrow reveal-el delay-1">YOUR NEXT STEP</span>
-          <h2 className="cta-heading reveal-el delay-2">Stop Waiting.<br/>Start Building.</h2>
-          <p className="cta-intro reveal-el delay-3">
+          <span className="cta-eyebrow">YOUR NEXT STEP</span>
+          <h2 className="cta-heading">Stop Waiting.<br/>Start Building.</h2>
+          <p className="cta-intro">
             Begin with practical free lessons or explore guided mentorship designed to help you move from learning to execution.
           </p>
           
-          <div className="cta-actions reveal-el delay-4">
+          <div className="cta-actions">
             <a 
               href="https://www.youtube.com/@etubers" 
               target="_blank" 

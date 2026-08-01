@@ -37,19 +37,19 @@ const youtubeData = {
 
 const YouTube = () => {
   return (
-    <section className="yt-section reveal-section" id="resources">
+    <section className="yt-section" id="resources">
       <div className="yt-container">
         
         {/* Header */}
         <div className="yt-header">
           <div className="yt-header-text">
-            <span className="yt-eyebrow reveal-el delay-1">LEARN FOR FREE</span>
-            <h2 className="yt-heading reveal-el delay-2">Start Before You Feel Ready.</h2>
-            <p className="yt-intro reveal-el delay-3">
+            <span className="yt-eyebrow">LEARN FOR FREE</span>
+            <h2 className="yt-heading">Start Before You Feel Ready.</h2>
+            <p className="yt-intro">
               Explore practical lessons from Etubers and begin developing useful digital skills at your own pace.
             </p>
           </div>
-          <div className="yt-header-action reveal-el delay-4">
+          <div className="yt-header-action">
             <a 
               href="https://www.youtube.com/@etubers" 
               target="_blank" 
@@ -65,7 +65,7 @@ const YouTube = () => {
         <div className="yt-showcase-grid">
           
           {/* Featured (Left) */}
-          <div className="yt-featured reveal-el delay-2">
+          <div className="yt-featured">
             <a href={youtubeData.featured.url} target="_blank" rel="noopener noreferrer" className="yt-video-link">
               <div className="yt-thumbnail-wrapper">
                 <img src={youtubeData.featured.image} alt={youtubeData.featured.title} className="yt-thumbnail" loading="lazy" />
@@ -83,7 +83,7 @@ const YouTube = () => {
           </div>
 
           {/* Supporting (Right) */}
-          <div className="yt-supporting-list reveal-el delay-3">
+          <div className="yt-supporting-list">
             {youtubeData.supporting.map((video) => (
               <a href={video.url} target="_blank" rel="noopener noreferrer" className="yt-video-link yt-compact-link" key={video.id}>
                 <div className="yt-compact-thumbnail-wrapper">

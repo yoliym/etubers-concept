@@ -54,20 +54,20 @@ const programsData = [
 
 const Programs = () => {
   return (
-    <section className="programs-section reveal-section" id="programs">
+    <section className="programs-section" id="programs">
       <div className="programs-container">
         
         <div className="programs-header">
-          <span className="programs-eyebrow reveal-el delay-1">PRACTICAL LEARNING PATHS</span>
-          <h2 className="programs-heading reveal-el delay-2">Skills You Can Put to Work.</h2>
-          <p className="programs-intro reveal-el delay-3">
+          <span className="programs-eyebrow">PRACTICAL LEARNING PATHS</span>
+          <h2 className="programs-heading">Skills You Can Put to Work.</h2>
+          <p className="programs-intro">
             Explore practical courses and mentorship designed to help you learn useful digital skills and apply them in the real world.
           </p>
         </div>
 
         <div className="programs-grid">
           {programsData.map((item) => (
-            <div className={`program-card reveal-el delay-${(item.id % 3) + 1}`} key={item.id}>
+            <div className="program-card" key={item.id}>
               <a href="#" className="program-link" onClick={(e) => e.preventDefault()}>
                 <div className="program-image-wrapper">
                   <img src={item.image} alt={item.title} className="program-image" loading="lazy" />

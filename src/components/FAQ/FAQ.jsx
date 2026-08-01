@@ -42,13 +42,13 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-section reveal-section" id="faq">
+    <section className="faq-section" id="faq">
       <div className="faq-container">
         
         <div className="faq-header">
-          <span className="faq-eyebrow reveal-el delay-1">QUESTIONS, ANSWERED</span>
-          <h2 className="faq-heading reveal-el delay-2">Start with Clarity.</h2>
-          <p className="faq-intro reveal-el delay-3">
+          <span className="faq-eyebrow">QUESTIONS, ANSWERED</span>
+          <h2 className="faq-heading">Start with Clarity.</h2>
+          <p className="faq-intro">
             Find quick answers about free learning, mentorship and how to begin with Etubers.
           </p>
         </div>
@@ -61,7 +61,7 @@ const FAQ = () => {
             const headerId = `header-${item.id}`;
 
             return (
-              <div className={`faq-item reveal-el delay-${(index % 4) + 1} ${isOpen ? 'is-open' : ''}`} key={item.id}>
+              <div className={`faq-item ${isOpen ? 'is-open' : ''}`} key={item.id}>
                 <h3 className="faq-item-header">
                   <button
                     id={headerId}

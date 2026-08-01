@@ -5,11 +5,11 @@ const About = () => {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <section className="about-section reveal-section" id="about">
+    <section className="about-section" id="about">
       <div className="about-container">
         
         {/* Section Number & Branding */}
-        <div className="about-header-meta reveal-el delay-1">
+        <div className="about-header-meta">
           <span className="about-number">01</span>
           <div className="about-line-accent"></div>
           <span className="about-brand-statement">TALK LESS. DO MORE.</span>
@@ -19,12 +19,12 @@ const About = () => {
           
           {/* Text Content */}
           <div className="about-text-column">
-            <h2 className="about-heading reveal-el delay-2">Education Built for Action.</h2>
-            <p className="about-intro reveal-el delay-3">
+            <h2 className="about-heading">Education Built for Action.</h2>
+            <p className="about-intro">
               Etubers turns complex digital topics into practical lessons, free resources and guided mentorship designed to help people move from learning to execution.
             </p>
             
-            <div className="about-principles reveal-el delay-4">
+            <div className="about-principles">
               <div className="principle-item">
                 <div className="principle-bullet"></div>
                 <h3 className="principle-title">LEARN PRACTICALLY</h3>
@@ -42,7 +42,7 @@ const About = () => {
 
           {/* Visual & Authority Content */}
           <div className="about-visual-column">
-            <div className="about-image-wrapper reveal-image delay-4">
+            <div className="about-image-wrapper">
               <img 
                 src="/images/etubers/thumbnails/creator-reference-02.jpg" 
                 alt="Mikiyas - Etubers" 
