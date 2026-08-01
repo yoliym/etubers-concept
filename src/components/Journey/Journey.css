@@ -1,0 +1,28 @@
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.journey-card {
+  padding: 2rem;
+  position: relative;
+}
+
+.journey-step {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.journey-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.journey-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

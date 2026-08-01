@@ -1,0 +1,24 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(112, 0, 255, 0.2), rgba(255, 0, 85, 0.2));
+}
+
+.gallery-cat {
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-placeholder h4 {
+  font-size: 1.1rem;
+}

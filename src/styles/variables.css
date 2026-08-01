@@ -1,0 +1,36 @@
+:root {
+  /* Color Palette */
+  --bg-base: #11100f;
+  --bg-surface: #181715;
+  --bg-elevated: #22201d;
+  
+  --text-primary: #f4f0ea;
+  --text-secondary: #a39d96;
+  --text-muted: #6b6660;
+  
+  --accent: #d46c43; /* Warm terracotta/copper */
+  --accent-hover: #e87e54;
+  
+  --border-subtle: rgba(244, 240, 234, 0.12);
+  --border-strong: rgba(244, 240, 234, 0.25);
+
+  /* Typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+  
+  /* Layout */
+  --nav-height: 88px;
+  --max-width: 1280px;
+  
+  /* Radii - Sharp geometry */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,79 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.about-text {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.highlight-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.highlight-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.highlight-item p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.about-visual {
+  padding: 2.5rem;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-tag {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.graph-placeholder {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  height: 160px;
+  margin-top: 1.5rem;
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(to top, var(--secondary), var(--primary));
+  border-radius: 4px;
+}
+.bar-1 { height: 40%; }
+.bar-2 { height: 70%; }
+.bar-3 { height: 55%; }
+.bar-4 { height: 95%; }

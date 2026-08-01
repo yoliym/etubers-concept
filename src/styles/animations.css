@@ -1,0 +1,120 @@
+/* Refined Hero Animations - The Execution Path */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes mask-reveal {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Staggered classes */
+.anim-nav {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.anim-eyebrow {
+  opacity: 0;
+  animation: fade-in 0.8s ease-out 0.2s forwards;
+}
+
+.anim-headline {
+  opacity: 0;
+  animation: rise-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.anim-body {
+  opacity: 0;
+  animation: rise-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.anim-ctas {
+  opacity: 0;
+  animation: rise-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+/* The mechanism container */
+.anim-mechanism {
+  opacity: 0;
+  animation: fade-in 0.8s ease-out 0.9s forwards;
+}
+
+.anim-mech-1 {
+  opacity: 0;
+  animation: fade-in 0.4s ease-out 1.0s forwards;
+}
+
+.anim-line-1 {
+  animation: line-draw 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+
+.anim-mech-2 {
+  opacity: 0;
+  animation: fade-in 0.4s ease-out 1.6s forwards;
+}
+
+.anim-line-2 {
+  animation: line-draw 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+}
+
+.anim-mech-3 {
+  opacity: 0;
+  animation: fade-in 0.4s ease-out 2.2s forwards;
+}
+
+.anim-portrait {
+  opacity: 0;
+  animation: fade-in 0.1s ease-out 2.4s forwards;
+}
+
+.anim-portrait .portrait-wrapper {
+  clip-path: inset(100% 0 0 0);
+  animation: mask-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2.4s forwards;
+}
+
+.execution-line {
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: line-draw 0.8s cubic-bezier(0.16, 1, 0.3, 1) 3.0s forwards;
+}
+
+/* Fallback for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .anim-nav, .anim-eyebrow, .anim-headline, .anim-body, .anim-ctas,
+  .anim-mechanism, .anim-mech-1, .anim-line-1,
+  .anim-mech-2, .anim-line-2, .anim-mech-3, .anim-portrait {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .anim-portrait .portrait-wrapper {
+    clip-path: none;
+    animation: none;
+  }
+  .execution-line {
+    transform: none;
+    animation: none;
+  }
+}
