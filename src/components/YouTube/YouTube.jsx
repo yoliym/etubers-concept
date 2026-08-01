@@ -68,7 +68,7 @@ const YouTube = () => {
           <div className="yt-featured">
             <a href={youtubeData.featured.url} target="_blank" rel="noopener noreferrer" className="yt-video-link">
               <div className="yt-thumbnail-wrapper">
-                <img src={youtubeData.featured.image} alt={youtubeData.featured.title} className="yt-thumbnail" />
+                <img src={youtubeData.featured.image} alt={youtubeData.featured.title} className="yt-thumbnail" loading="lazy" />
                 <div className="yt-play-overlay">
                   <div className="yt-play-icon">&#9658;</div>
                 </div>
@@ -87,7 +87,7 @@ const YouTube = () => {
             {youtubeData.supporting.map((video) => (
               <a href={video.url} target="_blank" rel="noopener noreferrer" className="yt-video-link yt-compact-link" key={video.id}>
                 <div className="yt-compact-thumbnail-wrapper">
-                  <img src={video.image} alt={video.title} className="yt-thumbnail" />
+                  <img src={video.image} alt={video.title} className="yt-thumbnail" loading="lazy" />
                   <div className="yt-play-overlay">
                     <div className="yt-play-icon small">&#9658;</div>
                   </div>

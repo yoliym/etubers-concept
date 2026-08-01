@@ -85,7 +85,7 @@ export default function Hero() {
               {imageError && (
                 <div className="portrait-placeholder">
                   <div className="placeholder-pattern"></div>
-                  <span className="placeholder-label mono">PORTRAIT ASSET REQUIRED</span>
+                  <span className="placeholder-label mono" style={{ fontSize: '3rem', opacity: 0.1, transform: 'rotate(-90deg)' }}>ETUBERS</span>
                 </div>
               )}
             </div>

@@ -70,7 +70,7 @@ const Programs = () => {
             <div className="program-card" key={item.id}>
               <a href="#" className="program-link" onClick={(e) => e.preventDefault()}>
                 <div className="program-image-wrapper">
-                  <img src={item.image} alt={item.title} className="program-image" />
+                  <img src={item.image} alt={item.title} className="program-image" loading="lazy" />
                   <div className="program-image-overlay"></div>
                 </div>
                 <div className="program-content">
