@@ -23,8 +23,8 @@ export default function Hero() {
           </p>
           
           <div className="hero-ctas anim-ctas">
-            <button className="btn-primary">Explore Free Courses</button>
-            <button className="btn-secondary">Join the Mentorship</button>
+            <a href="https://www.youtube.com/@etubers" target="_blank" rel="noopener noreferrer" className="btn-primary">Explore Free Courses</a>
+            <a href="https://upwork.etubers.org/" target="_blank" rel="noopener noreferrer" className="btn-secondary">Join the Mentorship</a>
           </div>
           
           <p className="hero-credibility mono anim-ctas">
@@ -75,7 +75,7 @@ export default function Hero() {
             {/* The portrait */}
             <div className="portrait-wrapper">
               <img 
-                src="/images/mikiyas-hero.webp" 
+                src="/images/etubers/thumbnails/digital-marketing-course.jpg" 
                 alt="Mikiyas Mulugeta" 
                 className={`portrait-img ${imageError ? 'hidden' : ''}`}
                 onError={() => setImageError(true)}
